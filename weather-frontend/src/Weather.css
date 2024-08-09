@@ -1,0 +1,119 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease;
+    overflow: hidden;
+}
+
+.weather-input {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+.weather-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.weather-button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.weather-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.weather-info {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.error {
+    color: red;
+    margin-top: 20px;
+}
+
+/* Backgrounds Based on Temperature */
+.cold {
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+}
+
+.cool {
+    background: linear-gradient(to bottom, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.warm {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+}
+
+.hot {
+    background: linear-gradient(to bottom, #ff4e50, #f9d423);
+}
+
+/* Backgrounds Based on Sky Conditions */
+.clear-sky {
+    background-image: url('//images//clear-sky.jpg');
+}
+
+.cloudy-sky {
+    background-image: url('//images//cloudy-sky.jpg');
+}
+
+.rainy-sky {
+    background-image: url('//images//rainy-sky.jpg');
+}
+
+.thunder-sky {
+    background-image: url('//images//thunder-sky.jpg');
+}
+
+.snowy-sky {
+    background-image: url('//images//snowy-sky.jpg');
+}
+
+.default-sky {
+    background-image: url('//images//default-sky.jpg');
+}
+
+/* Responsive Backgrounds */
+@media (max-width: 767px) {
+    .weather-container {
+        background-size: contain;
+    }
+}
+
+@media (min-width: 768px) {
+    .weather-container {
+        background-size: cover;
+    }
+}
